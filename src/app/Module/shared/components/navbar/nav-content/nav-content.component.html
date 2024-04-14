@@ -1,0 +1,25 @@
+<div class="w-full">
+    <div class="bg-gray-950 text-white w-full h-1/2 shadow-lg p-6">
+        <div class="flex justify-around">
+            <div class="flex flex-col" *ngFor="let item of category[selectedSection].sections">
+                <h1 class="text center">{{item.name}}</h1>
+
+                <button (click)="handleNavigate('/'+selectedSection+'/'+item.id+'/'+section.id)" mat-button *ngFor="let section of item.items">
+                    {{section.name}}
+                </button>
+            </div>
+            <div class="hidden lg:block">
+                <div class="mb-5">
+                    <img class="w-[19rem] h-[20rem] object-cover object-top rounded-md" src="https://rukminim1.flixcart.com/image/612/612/xif0q/kurta/1/h/g/m-pw333-purshottam-wala-original-imag8zf6ybkmhehy-bb.jpeg?q=70" alt="">
+                </div>
+                <p class="text-gray-600">New love</p>
+            </div>
+            <div class="hidden lg:block">
+                <div class="mb-5">
+                    <img class="w-[19rem] h-[20rem] object-cover object-top rounded-md" src="https://rukminim1.flixcart.com/image/612/612/xif0q/dress/z/s/i/s-a1-zwerlon-original-imagn9uycxbhshur.jpeg?q=70" alt="">
+                </div>
+                <p class="text-gray-600">New love</p>
+            </div>
+        </div>
+    </div>
+</div>
